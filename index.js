@@ -20,3 +20,5 @@ bot.registry.registerCommandsIn(__dirname + "/commands");
 bot.on('message',GrofitWatch.watch);
 
 bot.login(fs.readFileSync(__dirname + "/key.txt",'utf8'));
+
+//
