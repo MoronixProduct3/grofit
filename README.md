@@ -15,35 +15,41 @@ It uses 2 regular expressions to decide if the format is respected. The "white" 
 Applies the rules to the channel passed as an argument.  Accepts more than one channel at a time. ( Admin only )
 
 Aliases : **rg**
+
 Syntax: `regulate #tradeChannel`
 
 ### deregulate
 Removes the effect of `regulate`. The text channel passed as an argument will no longer be affected by the bot. If `all` is passed as an argument, all the text channels will be cleared. ( Admin only )
 
 Aliases : **drg**
+
 Syntax: `deregulate #tradeChannel .. | all`
 
 ### list_regulated
 Prints a list of all the regulated channels on the server. This command can be ran by anyone.
 
 Aliases : **lr**
+
 Syntax: `list_regulated`
 
 ### regulation_blacklist
 Sets the regular expression that valid messages should not match. Calling this function without arguments simply displays the current regular expression ( Any user ). Regular expressions must follow javascript standards. Typing `disable` as an argument will disable the "black" filter. ( Admin only )
 
 Aliases : **rbl**
+
 Syntax: `regulation_blacklist /regex/mods | disable`
 
 ### regulation_whitelist
 Sets the regular expression that valid messages must match. Calling this function without arguments simply displays the current regular expression ( Any user ). Regular expressions must follow javascript standards. Typing `disable` as an argument will disable the "white" filter. ( Admin only )
 
 Aliases : **rwl**
+
 Syntax: `regulation_whitelist /regex/mods | disable`
 
 ### regulation_message
 Change the message sent to those who post messages that do not respect the format in trade chat. If no argument is provided, the message will be reset to default.( Admin only )
 
 Aliases : **rgm**
+
 Syntax: `regulation_message message`
 
