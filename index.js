@@ -6,7 +6,8 @@ const fs = require('fs');
 
 
 const bot = new Commando.Client({
-    owner: fs.readFileSync(__dirname + "/owner.txt",'utf8').trim()
+    owner: fs.readFileSync(__dirname + "/owner.txt",'utf8').trim(),
+    commandPrefix: '|'
 });
 
 bot.setProvider(
