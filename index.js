@@ -6,7 +6,7 @@ const fs = require('fs');
 
 
 const bot = new Commando.Client({
-    owner: fs.readFileSync(__dirname + "/owner.txt",'utf8')
+    owner: fs.readFileSync(__dirname + "/owner.txt",'utf8').trim()
 });
 
 bot.setProvider(
@@ -19,6 +19,4 @@ bot.registry.registerCommandsIn(__dirname + "/commands");
 
 bot.on('message',GrofitWatch.watch);
 
-bot.login(fs.readFileSync(__dirname + "/key.txt",'utf8'));
-
-//
+bot.login(fs.readFileSync(__dirname + "/key.txt",'utf8').trim());
