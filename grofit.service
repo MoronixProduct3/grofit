@@ -1,0 +1,13 @@
+[Unit]
+Description=Grofit Box moderates Discord text channels
+After=network.service
+Documentation=https://github.com/MoronixProduct3/grofit
+
+[Service]
+User=root
+WorkingDirectory=/srv/grofit
+ExecStart=/usr/bin/node /srv/grofit/ --harmony
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
